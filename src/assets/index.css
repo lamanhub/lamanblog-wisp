@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply text-gray-600 font-roboto;
+}
+
+.container:before {
+  content: "";
+  @apply h-96 absolute top-0 left-0 w-full bg-indigo-200 -z-10;
+}
+
+.container:after {
+  content: "";
+  @apply h-32 absolute top-96 left-0 w-full bg-gradient-to-b from-indigo-200 to-transparent -z-10;
+}
