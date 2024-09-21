@@ -18,7 +18,7 @@ Install via [Laman.js showcase](https://lamanhub.site/showcase) with the followi
 1. Run the following command:
 
    ```bash
-   npm init lamanjs my-blog --showcase lamanhub/lamanblog-wisp
+   npm init lamanjs my-blog -- -s lamanhub/lamanblog-wisp
    ```
 
 2. Navigate into the project directory:
