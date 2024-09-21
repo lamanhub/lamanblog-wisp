@@ -18,4 +18,4 @@ npm run build
 
 ## Documentation
 
-The documentation is available on the [LamanHub](https://lamanhub.site/docs/what-is-lamanhub.html)
+The documentation is available on the [LamanHub](https://lamanjs.lamanhub.site/docs/what-is-lamanhub.html)
