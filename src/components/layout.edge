@@ -1,11 +1,11 @@
-@let(posts = (await inject.wisp.getPosts({ limit: "all" })).posts)
+@let(posts = (await inject().wisp.getPosts({ limit: "all" })).posts)
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{ $props.get('title') || `${inject.config.title} - ${inject.config.description}` }}</title>
+    <title>{{ $props.get('title') || `${inject().config.title} - ${inject().config.description}` }}</title>
     <link rel="icon" type="image/svg+xml" href="/lamanhub.svg" />
     <link rel="stylesheet" href="/src/assets/index.css" />
 
@@ -29,7 +29,7 @@
                 class="bg-indigo-600 rounded py-3 px-5 text-white font-bold uppercase font-montserrat">Blog</a>
             <nav class="ml-auto">
                 <ul class="flex justify-end items-center">
-                    @each(links in inject.config.navlinks)
+                    @each(links in inject().config.navlinks)
                     @!component('components/nav-list', {
                     link: links.link,
                     title: links.title

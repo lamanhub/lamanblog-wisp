@@ -1,4 +1,4 @@
-import { buildWispClient } from "@wisp-cms/client";
+import { buildWispClient } from "@wisp-cms/client/src/index";
 import config from "./config";
 
 const wisp = buildWispClient({

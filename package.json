@@ -16,7 +16,7 @@
   "dependencies": {
     "@wisp-cms/client": "^0.0.16",
     "iconify-icon": "^2.1.0",
-    "lamanjs": "^1.0.12",
+    "lamanjs": "^1.0.16",
     "moment": "^2.30.1"
   },
   "devDependencies": {

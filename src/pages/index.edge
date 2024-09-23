@@ -1,28 +1,28 @@
-@let(posts = (await inject.wisp.getPosts({ limit: "all" })).posts)
+@let(posts = (await inject().wisp.getPosts({ limit: "all" })).posts)
 @layout('components/layout')
 
 @slot('meta')
-<meta name="description" content="{{ inject.config.description }}">
-<meta name="og:title" content="{{ inject.config.title }}">
-<meta name="og:description" content="{{ inject.config.description }}">
-<meta name="og:image" content="{{ inject.config.image }}">
+<meta name="description" content="{{ inject().config.description }}">
+<meta name="og:title" content="{{ inject().config.title }}">
+<meta name="og:description" content="{{ inject().config.description }}">
+<meta name="og:image" content="{{ inject().config.image }}">
 <meta name="og:url" content="{{ req.protocol }}://{{ req.get('host') }}{{ req.path }}">
 <meta name="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{{ inject.config.title }}">
-<meta name="twitter:description" content="{{ inject.config.description }}">
-<meta name="twitter:image" content="{{ inject.config.image }}">
-<meta name="og:site_name" content="{{ inject.config.title }}">
+<meta name="twitter:title" content="{{ inject().config.title }}">
+<meta name="twitter:description" content="{{ inject().config.description }}">
+<meta name="twitter:image" content="{{ inject().config.image }}">
+<meta name="og:site_name" content="{{ inject().config.title }}">
 @end
 
 <div class="py-20 flex flex-col items-center justify-center px-5 lg:px-20 mt-8 bg-gray-100 rounded-lg mx-5 lg:mx-20">
   <div class="w-32 h-32 rounded-full bg-white border border-indigo-300 overflow-hidden">
-    <img src="{{ inject.config.image }}" alt="Profile" title="Profile" class="w-full h-full object-cover" />
+    <img src="{{ inject().config.image }}" alt="Profile" title="Profile" class="w-full h-full object-cover" />
   </div>
-  <h1 class="font-bold font-montserrat text-3xl mt-5 text-gray-800 text-center">{{ inject.config.title }}</h1>
-  <h2 class="text-lg mt-1 text-gray-700 text-center">{{ inject.config.description }}</h2>
+  <h1 class="font-bold font-montserrat text-3xl mt-5 text-gray-800 text-center">{{ inject().config.title }}</h1>
+  <h2 class="text-lg mt-1 text-gray-700 text-center">{{ inject().config.description }}</h2>
   <ul class="flex justify-center items-center mt-5 space-x-2">
-    @each(social in inject.config.socials)
+    @each(social in inject().config.socials)
     @component('components/social-link', {
     title: social.title,
     link: social.link,
